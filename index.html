@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Header Portion -->
+    <header class="grid grid-cols-2 gap-96 bg-sky-100 mt-8 w-11/12 mx-auto h-28 rounded-lg">
+        <div class="pl-7">
+            <h1 class="text-4xl font-bold pt-4">Interactive</h1>
+            <h3 class="text-2xl font-medium pt-1 text-slate-500">Geometry Genius</h3>
+        </div>
+        <div>
+            <button class="text-lg mt-9 ml-96 bg-sky-500 px-7 py-2 text-white font-medium rounded-lg"><a href="blog.html">Blog</a></button>
+        </div>
+    </header>
+    <!-- Grid Section -->
+    <main>
+        <section class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 grid-rows-2 gap-5 mt-7 w-11/12 mx-auto rounded-lg">
+            <div class="grid justify-items-center flex items-center border-2 rounded-lg" id="random">
+                <div class="w-48 mt-6">
+                    <img src="images/triangle.png" alt="">
+                    <h3 class="text-xl text-center font-bold text-slate-700 mt-9">Triangle</h3>
+                    <h4 class="text-md text-center font-normal text-slate-600">Area (A) = 0.5 x b x h</h4>
+                    <div class="flex items-center flex flex-column gap-5 mt-6">
+                        <input type="text" name="" id="base-field" placeholder="b" class="w-14 bg-slate-200 rounded"> cm
+                        <input type="text" name="" id="height-field" placeholder="h" class="w-14 bg-slate-200 rounded"> cm
+                    </div>
+                    <button class="text-lg mt-7 mb-6 bg-sky-600 text-white font-medium rounded w-full h-10" id="btn-triangle">Calculate</button>
+                </div>
+            </div>
+            <div class="grid justify-items-center flex items-center border-2 rounded-lg" id="random-1">
+                <div class="w-48 mt-6">
+                    <img src="images/rectangle.png" alt="">
+                    <h3 class="text-xl text-center font-bold text-slate-700 mt-16">Rectangle</h3>
+                    <h4 class="text-md text-center font-normal text-slate-600">Area (A) = w x l</h4>
+                    <div class="flex items-center flex flex-column gap-5 mt-6">
+                        <input type="text" name="" id="width-field" placeholder="w" class="w-14 bg-slate-200 rounded"> cm
+                        <input type="text" name="" id="length-field" placeholder="l" class="w-14 bg-slate-200 rounded"> cm
+                    </div>
+                    <button id="btn-rectangle" class="text-lg mt-7 mb-6 bg-sky-600 text-white font-medium rounded w-full h-10">Calculate</button>
+                </div>
+            </div>
+            <div class="grid justify-items-center flex items-center border-2 rounded-lg" id="random-2">
+                <div class="w-48 mt-6">
+                    <img src="images/parallelogram.png" alt="">
+                    <h3 class="text-xl text-center font-bold text-slate-700 mt-20">Parallelogram</h3>
+                    <h4 class="text-md text-center font-normal text-slate-600">Area (A) = b x h</h4>
+                    <div class="flex items-center flex flex-column gap-5 mt-6">
+                        <input type="text" name="" id="base1-field" placeholder="b" class="w-14 bg-slate-200 rounded"> cm
+                        <input type="text" name="" id="height1-field" placeholder="h" class="w-14 bg-slate-200 rounded"> cm
+                    </div>
+                    <button id="btn-parallelogram" class="text-lg mt-7 mb-6 bg-sky-600 text-white font-medium rounded w-full h-10">Calculate</button>
+                </div>
+            </div>
+            <div class="border-2 rounded-lg">
+                <h1 class="text-center font-bold underline decoration-2" id="area-field">Area Calculation</h1>
+                <ol type="1" id="result-list" class="ml-5 mt-8"></ol>
+            </div>
+            <div class="grid justify-items-center flex items-center border-2 rounded-lg" id="random-3">
+                <div class="w-48 mt-6">
+                    <img src="images/rhombus.png" alt="">
+                    <h3 class="text-xl text-center font-bold text-slate-700 mt-20">Rhombus</h3>
+                    <h4 class="text-md text-center font-normal text-slate-600">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></h4>
+                    <div class="flex items-center flex flex-column gap-5 mt-6">
+                        <input type="text" name="" id="diagonalOne-field" placeholder="d1" class="w-14 bg-slate-200 rounded"> cm
+                        <input type="text" name="" id="diagonalTwo-field" placeholder="d2" class="w-14 bg-slate-200 rounded"> cm
+                    </div>
+                    <button id="btn-rhombus" class="text-lg mt-7 mb-6 bg-sky-600 text-white font-medium rounded w-full h-10">Calculate</button>
+                </div>
+            </div>
+            <div class="grid justify-items-center flex items-center border-2 rounded-lg" id="random-4">
+                <div class="w-48 mt-6">
+                    <img src="images/pentagon.png" alt="">
+                    <h3 class="text-xl text-center font-bold text-slate-700 mt-10">Pentagon</h3>
+                    <h4 class="text-md text-center font-normal text-slate-600">Area (A) = 0.5 x p x b</h4>
+                    <div class="flex items-center flex flex-column gap-5 mt-6">
+                        <input type="text" name="" id="p-field" placeholder="p" class="w-14 bg-slate-200 rounded"> cm
+                        <input type="text" name="" id="b-field" placeholder="b" class="w-14 bg-slate-200 rounded"> cm
+                    </div>
+                    <button id="btn-pentagon" class="text-lg mt-7 mb-6 bg-sky-600 text-white font-medium rounded w-full h-10">Calculate</button>
+                </div>
+            </div>
+            <div class="grid justify-items-center flex items-center border-2 rounded-lg" id="random-5">
+                <div class="w-48 mt-6">
+                    <img src="images/ellipse.png" alt="">
+                    <h3 class="text-xl text-center font-bold text-slate-700 mt-24">Ellipse</h3>
+                    <h4 class="text-md text-center font-normal text-slate-600">Area (A) = <span>&#960;</span>ab</h4>
+                    <div class="flex items-center flex flex-column gap-5 mt-6">
+                        <input type="text" name="" id="a-field" placeholder="a" class="w-14 bg-slate-200 rounded"> cm
+                        <input type="text" name="" id="b1-field" placeholder="b" class="w-14 bg-slate-200 rounded"> cm
+                    </div>
+                    <button id="btn-ellipse" class="text-lg mt-7 mb-6 bg-sky-600 text-white font-medium rounded w-full h-10">Calculate</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/randomColor.js"></script>
+    <script src="js/triangleRhombusPentagon.js"></script>
+    <script src="js/rectangleParallelogram.js"></script>
+    <script src="js/ellipse.js"></script>
+</body>
+</html>
